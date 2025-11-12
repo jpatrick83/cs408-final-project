@@ -86,6 +86,6 @@ Technical Details
 
 ## Project Wireframe
 
-TODO: Replace the wireframe below with you own design.
+index.html
 
-![wireframe](wireframe-example.png)
+![wireframe](index_html.jpg)
