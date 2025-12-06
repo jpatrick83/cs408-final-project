@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holiday Planner - Gift List</title>
+</head>
+
+<body>
+
+    <!-- NAV BAR -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="todo.html">To-Do List</a></li>
+            <li><a href="grocery.html">Grocery List</a></li>
+            <li><a href="gifts.html">Gift List</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Gift List</h1>
+        <p>Track your gift ideas, budgets, and purchases.</p>
+    </header>
+
+    <!-- GIFT ITEMS -->
+    <section>
+        <h2>Gift Entries</h2>
+
+        <ul id="gift-list">
+            <li>Mom — Sweater ($40) <button>Delete</button></li>
+            <li>Chris — Headphones ($60) <button>Delete</button></li>
+            <li>Emma — Candle set ($20) <button>Delete</button></li>
+        </ul>
+    </section>
+
+    <!-- ADD GIFT ITEM FORM -->
+    <section>
+        <h2>Add Gift</h2>
+
+        <form id="gift-add-form" method="POST" action="#">
+            <label for="recipient">Recipient:</label><br>
+            <input type="text" id="recipient" name="recipient" required><br><br>
+
+            <label for="giftIdea">Gift Idea:</label><br>
+            <input type="text" id="giftIdea" name="giftIdea"><br><br>
+
+            <label for="budget">Budget ($):</label><br>
+            <input type="number" id="budget" name="budget" min="0"><br><br>
+
+            <button type="submit">Add Gift</button>
+        </form>
+    </section>
+
+</body>
+</html>

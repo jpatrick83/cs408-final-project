@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holiday Planner - Grocery List</title>
+</head>
+
+<body>
+
+    <!-- NAV BAR -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="todo.html">To-Do List</a></li>
+            <li><a href="grocery.html">Grocery List</a></li>
+            <li><a href="gifts.html">Gift List</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Grocery List</h1>
+        <p>Keep track of everything you need for holiday meals and parties.</p>
+    </header>
+
+    <!-- GROCERY ITEMS -->
+    <section>
+        <h2>Items</h2>
+
+        <ul id="grocery-list">
+            <li>Butter (2 sticks) <button>Delete</button></li>
+            <li>Sugar (1 bag) <button>Delete</button></li>
+            <li>Hot cocoa mix (1 box) <button>Delete</button></li>
+        </ul>
+    </section>
+
+    <!-- ADD GROCERY ITEM FORM -->
+    <section>
+        <h2>Add Grocery Item</h2>
+
+        <form id="grocery-add-form" method="POST" action="#">
+            <label for="itemName">Item Name:</label><br>
+            <input type="text" id="itemName" name="itemName" required><br><br>
+
+            <label for="quantity">Quantity:</label><br>
+            <input type="text" id="quantity" name="quantity"><br><br>
+
+            <label for="notes">Notes:</label><br>
+            <input type="text" id="notes" name="notes"><br><br>
+
+            <button type="submit">Add Item</button>
+        </form>
+    </section>
+
+</body>
+</html>

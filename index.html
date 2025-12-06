@@ -1,18 +1,78 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <title>Holiday Planner - Home</title>
 </head>
 
 <body>
-  <h1>HTML Rocks!</h1>
-  <img src="img/compile.jpeg">
-  <script type="module" src="js/main.js"></script>
-</body>
 
+    <!-- NAV BAR -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="todo.html">To-Do List</a></li>
+            <li><a href="grocery.html">Grocery List</a></li>
+            <li><a href="gifts.html">Gift List</a></li>
+        </ul>
+    </nav>
+
+    <h1>Holiday Planner</h1>
+    <p>Welcome! Add a task for today.</p>
+
+    <!-- TODAY'S TASKS -->
+    <section>
+        <h2>Today's Tasks</h2>
+        <ul id="task-list"></ul>
+    </section>
+
+    <!-- ADD TASK FORM -->
+    <section>
+        <h2>Add Task</h2>
+        <form id="task-form">
+            <label>Task:</label><br>
+            <input type="text" id="taskInput" required><br><br>
+
+            <label>Date:</label><br>
+            <input type="date" id="taskDate"><br><br>
+
+            <button type="submit">Add Task</button>
+        </form>
+    </section>
+
+
+    <!-- =======================
+         GROCERY LIST PREVIEW
+    ======================== -->
+    <section>
+        <h2>Grocery List</h2>
+
+        <ul>
+            <li>Milk (2)</li>
+            <li>Eggs (1 dozen)</li>
+            <li>Flour (1 bag)</li>
+        </ul>
+
+        <a href="grocery.html">View Full Grocery List →</a>
+    </section>
+
+
+    <!-- =======================
+         GIFT LIST PREVIEW
+    ======================== -->
+    <section>
+        <h2>Gift List</h2>
+
+        <ul>
+            <li>Mom — Scarf</li>
+            <li>Dave — Board Game</li>
+            <li>Sarah — Book</li>
+        </ul>
+
+        <a href="gifts.html">View Full Gift List →</a>
+    </section>
+    
+    <script src="./js/main.js"></script>
+
+</body>
 </html>
