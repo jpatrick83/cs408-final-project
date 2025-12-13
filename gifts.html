@@ -2,54 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holiday Planner - Gift List</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-
-    <!-- NAV BAR -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="todo.html">To-Do List</a></li>
             <li><a href="grocery.html">Grocery List</a></li>
             <li><a href="gifts.html">Gift List</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
     </nav>
 
-    <header>
+    <main>
         <h1>Gift List</h1>
-        <p>Track your gift ideas, budgets, and purchases.</p>
-    </header>
+        <p>Track all the gifts you are planning.</p>
 
-    <!-- GIFT ITEMS -->
-    <section>
-        <h2>Gift Entries</h2>
+        <section>
+            <h2>Gift Items</h2>
+            <ul id="gift-list" aria-live="polite"></ul>
+        </section>
 
-        <ul id="gift-list">
-            <li>Mom — Sweater ($40) <button>Delete</button></li>
-            <li>Chris — Headphones ($60) <button>Delete</button></li>
-            <li>Emma — Candle set ($20) <button>Delete</button></li>
-        </ul>
-    </section>
+        <section>
+            <h2>Add Gift</h2>
+            <form id="gift-add-form">
+                <label for="recipient">Recipient:</label>
+                <input type="text" id="recipient" name="recipient" required aria-required="true">
 
-    <!-- ADD GIFT ITEM FORM -->
-    <section>
-        <h2>Add Gift</h2>
+                <label for="giftName">Gift:</label>
+                <input type="text" id="giftName" name="giftName" required aria-required="true">
 
-        <form id="gift-add-form" method="POST" action="#">
-            <label for="recipient">Recipient:</label><br>
-            <input type="text" id="recipient" name="recipient" required><br><br>
+                <button type="submit">Add Gift</button>
+            </form>
+        </section>
+    </main>
 
-            <label for="giftIdea">Gift Idea:</label><br>
-            <input type="text" id="giftIdea" name="giftIdea"><br><br>
+    <footer>
+        &copy; 2025 Holiday Planner
+    </footer>
 
-            <label for="budget">Budget ($):</label><br>
-            <input type="number" id="budget" name="budget" min="0"><br><br>
-
-            <button type="submit">Add Gift</button>
-        </form>
-    </section>
-
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

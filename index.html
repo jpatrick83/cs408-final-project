@@ -1,78 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holiday Planner - Home</title>
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-
-    <!-- NAV BAR -->
+    <!-- NAVIGATION -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="todo.html">To-Do List</a></li>
             <li><a href="grocery.html">Grocery List</a></li>
             <li><a href="gifts.html">Gift List</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
     </nav>
 
-    <h1>Holiday Planner</h1>
-    <p>Welcome! Add a task for today.</p>
+    <main>
+        <h1>Holiday Planner</h1>
+        <p>Welcome! Manage tasks, groceries, and gifts for your holiday planning.</p>
 
-    <!-- TODAY'S TASKS -->
-    <section>
-        <h2>Today's Tasks</h2>
-        <ul id="task-list"></ul>
-    </section>
+        <!-- TODAY'S TASKS -->
+        <section>
+            <h2>Today's Tasks</h2>
+            <ul id="today-task-list" aria-live="polite"></ul>
+        </section>
 
-    <!-- ADD TASK FORM -->
-    <section>
-        <h2>Add Task</h2>
-        <form id="task-form">
-            <label>Task:</label><br>
-            <input type="text" id="taskInput" required><br><br>
+        <!-- ADD TASK FORM -->
+        <section>
+            <h2>Add Task</h2>
+            <form id="task-form">
+                <label for="taskInput">Task:</label>
+                <input type="text" id="taskInput" name="taskInput" required aria-required="true">
 
-            <label>Date:</label><br>
-            <input type="date" id="taskDate"><br><br>
+                <label for="taskDate">Date:</label>
+                <input type="date" id="taskDate" name="taskDate">
 
-            <button type="submit">Add Task</button>
-        </form>
-    </section>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
 
+        <!-- GROCERY PREVIEW -->
+        <section>
+            <h2>Grocery List Preview</h2>
+            <ul id="grocery-list" class="preview-list" aria-live="polite"></ul>
+            <a href="grocery.html">View Full Grocery List →</a>
+        </section>
 
-    <!-- =======================
-         GROCERY LIST PREVIEW
-    ======================== -->
-    <section>
-        <h2>Grocery List</h2>
+        <!-- GIFT PREVIEW -->
+        <section>
+            <h2>Gift List Preview</h2>
+            <ul id="gift-list" class="preview-list" aria-live="polite"></ul>
+            <a href="gifts.html">View Full Gift List →</a>
+        </section>
+    </main>
 
-        <ul>
-            <li>Milk (2)</li>
-            <li>Eggs (1 dozen)</li>
-            <li>Flour (1 bag)</li>
-        </ul>
+    <footer>
+        &copy; 2025 Holiday Planner
+    </footer>
 
-        <a href="grocery.html">View Full Grocery List →</a>
-    </section>
-
-
-    <!-- =======================
-         GIFT LIST PREVIEW
-    ======================== -->
-    <section>
-        <h2>Gift List</h2>
-
-        <ul>
-            <li>Mom — Scarf</li>
-            <li>Dave — Board Game</li>
-            <li>Sarah — Book</li>
-        </ul>
-
-        <a href="gifts.html">View Full Gift List →</a>
-    </section>
-    
-    <script src="./js/main.js"></script>
-
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

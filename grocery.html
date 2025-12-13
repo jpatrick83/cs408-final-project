@@ -2,54 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holiday Planner - Grocery List</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-
-    <!-- NAV BAR -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="todo.html">To-Do List</a></li>
             <li><a href="grocery.html">Grocery List</a></li>
             <li><a href="gifts.html">Gift List</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
     </nav>
 
-    <header>
+    <main>
         <h1>Grocery List</h1>
         <p>Keep track of everything you need for holiday meals and parties.</p>
-    </header>
 
-    <!-- GROCERY ITEMS -->
-    <section>
-        <h2>Items</h2>
+        <section>
+            <h2>Items</h2>
+            <ul id="grocery-list" aria-live="polite"></ul>
+        </section>
 
-        <ul id="grocery-list">
-            <li>Butter (2 sticks) <button>Delete</button></li>
-            <li>Sugar (1 bag) <button>Delete</button></li>
-            <li>Hot cocoa mix (1 box) <button>Delete</button></li>
-        </ul>
-    </section>
+        <section>
+            <h2>Add Grocery Item</h2>
+            <form id="grocery-add-form">
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" name="itemName" required aria-required="true">
 
-    <!-- ADD GROCERY ITEM FORM -->
-    <section>
-        <h2>Add Grocery Item</h2>
+                <label for="quantity">Quantity:</label>
+                <input type="text" id="quantity" name="quantity">
 
-        <form id="grocery-add-form" method="POST" action="#">
-            <label for="itemName">Item Name:</label><br>
-            <input type="text" id="itemName" name="itemName" required><br><br>
+                <label for="notes">Notes:</label>
+                <input type="text" id="notes" name="notes">
 
-            <label for="quantity">Quantity:</label><br>
-            <input type="text" id="quantity" name="quantity"><br><br>
+                <button type="submit">Add Item</button>
+            </form>
+        </section>
+    </main>
 
-            <label for="notes">Notes:</label><br>
-            <input type="text" id="notes" name="notes"><br><br>
+    <footer>
+        &copy; 2025 Holiday Planner
+    </footer>
 
-            <button type="submit">Add Item</button>
-        </form>
-    </section>
-
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
